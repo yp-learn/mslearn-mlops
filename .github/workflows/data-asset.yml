@@ -17,6 +17,10 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: debug ls
       run: ls -lah experimentation/data/
+    - name: debug pwd
+      run: pwd
+    - name: debug ls glob
+      run: ls -lah /home/runner/work/mslearn-mlops/experimentation/data
     - name: Create data asset
       run: |
         az ml data create --file src/data.yml \
