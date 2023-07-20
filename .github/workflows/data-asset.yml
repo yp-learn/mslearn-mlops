@@ -17,6 +17,7 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: debug ls
       run: ls -lah experimentation/data/
+    - name: Create data asset
       run: |
         az ml data create --file src/data.yml \
         -r learning -w mslearn
