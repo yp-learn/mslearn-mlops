@@ -20,6 +20,6 @@ jobs:
     - name: Create data asset
       run: |
         az ml data create --file src/data.yml \
-        -r learning -w mslearn
+        -g learning -w mslearn
 
 
